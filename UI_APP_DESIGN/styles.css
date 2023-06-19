@@ -1,0 +1,174 @@
+* {
+    user-select: none;
+}
+
+body,html {
+    margin: 0;
+    background-color: rgb(228 255 246);
+}
+
+body {
+    overflow-y: scroll;
+}
+
+.headTitle {
+    z-index: 999999;
+    top: 0;
+    position: fixed;
+    font-family: 'berlin sans fb';
+    letter-spacing: 3px;
+    font-size: 65px;
+    padding: 10px;
+    color: black;
+}
+
+.container-level {
+    z-index: 99;
+    color: rgb(236 236 236);
+    font-family: 'Arial Rounded MT';
+    padding: 10px;
+    position: fixed;
+    top: 90px;
+    left: 20px;
+    right: 20px;
+    background-image: linear-gradient(15deg , blue , lightblue);
+    border-radius: 10px;
+}
+
+.container-level .levelName {
+    background-color: blue;
+    border-radius: 0px 10px 0px 10px;
+    position: fixed;
+    right: 20px;
+    padding: 3px;
+    top: 90px;
+    font-size: 15px;
+}
+
+.container-level .levelValue {
+    font-size: 36px;
+}
+
+.container-level .status {
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    display: grid;
+    position: fixed;
+    height: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    background-color: white;
+    border-radius: 35px 35px 0px 0px;
+    padding: 7px 0px 7px 0px;
+    gap: 15px;
+    top: 93%;
+    box-shadow: 0px -3px 5px gray;
+    justify-items: center;
+}
+
+.f , .selected {
+    border-radius: 35px;
+    background-color: rgb(207 255 255);
+    font-family: 'Arial Rounded MT';
+    font-size: 17px;
+    height: 80%;
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    width: 70%;
+    transition: 150ms;
+}
+
+.f:hover {
+    background-color: rgb(207 255 205);
+}
+
+.selected {
+    background-color: rgb(265 255 105);
+}
+
+/* DAYS */
+.container {
+    z-index: 5;
+    margin-bottom: 95px;
+    margin-top: 195px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
+    gap: 7px;
+}
+
+.dayContainer {
+    cursor: pointer;
+    transition: 0ms;
+    width: 97.2%;
+    padding: 15px 0px 15px 10px;
+    background-color: white;
+    border-radius: 13px;
+    border-left: 5px solid transparent;
+}
+
+.dayContainer:hover , .dayContainer:active {
+    background-color: whitesmoke;
+}
+
+.dayNumber {
+    color: black;
+    font-size: 32px;
+    font-family: 'Arial Rounded MT';
+}
+
+.middleLine {
+    position: fixed;
+    width: 100%;
+    height: 215px;
+    background-color: rgb(228 255 246);
+    top: 0;
+    z-index: 20;
+}
+
+.loaderElem {
+    animation: load 0.83s infinite;
+    z-index: 9999999999;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid rgb(111 111 111 / 66%);
+    border-right: 5px solid blue;
+    border-bottom: 5px solid blue;
+}
+
+@keyframes load {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.preLoader {
+    transition: 700ms;
+    opacity: 100%;
+    z-index: 999999999999999999;
+    top: 0;
+    display: grid;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.preLoaderRow {
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+}

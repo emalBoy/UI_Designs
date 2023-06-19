@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- PreLoader : Using for make the design more perfect -->
+        <div class="preLoader" id="preLoader">
+            <div class="preLoaderRow">
+                <div class="loaderElem" id="loadElem"></div>
+            </div>
+        </div>
+        <script>
+            'use strict';
+
+            const loader = {
+                main: document.getElementById('preLoader'),
+                elem: document.getElementById('loadElem')
+            };
+
+            window.addEventListener('load', ()=>{
+                setTimeout(function() {
+                    loader.main.style.top = '-120%';
+                    setTimeout(function() {
+                        loader.elem.style.animation = '';
+                        loader.main.innerHTML = '';
+                    }, 2000);
+                }, 1500);
+            }
+            );
+        </script>
+        <div class="headTitle">Exercises</div>
+        <div class="container-level">
+            <div class="levelName">Beginner level</div>
+            <div class="levelValue">Level 1</div>
+            <div class="status">Not Completed</div>
+        </div>
+        <div class="middleLine"><!-- Make a gap --></div>
+        <!-- DAYS -->
+        <div class="container">
+            <div class="dayContainer">
+                <div class="dayNumber">Day 1</div>
+            </div>
+            <div class="dayContainer">
+                <div class="dayNumber">Day 2</div>
+            </div>
+            <div class="dayContainer">
+                <div class="dayNumber">Day 3</div>
+            </div>
+            <div class="dayContainer">
+                <div class="dayNumber">Day 4</div>
+            </div>
+            <div class="dayContainer">
+                <div class="dayNumber">Day 5</div>
+            </div>
+            <div class="dayContainer">
+                <div class="dayNumber">Day 6</div>
+            </div>
+            <div class="dayContainer">
+                <div class="dayNumber">Day 7</div>
+            </div>
+            <div class="dayContainer">
+                <div class="dayNumber">Day 8</div>
+            </div>
+            <div class="dayContainer">
+                <div class="dayNumber">Day 9</div>
+            </div>
+            <div class="dayContainer">
+                <div class="dayNumber">Day 10</div>
+            </div>
+        </div>
+        <!-- NAVIGATIONS -->
+        <div class="footer">
+            <div class="selected">Home</div>
+            <div class="f">Custom</div>
+            <div class="f">History</div>
+            <div class="f">Settings</div>
+        </div>
+    </body>
+</html>
